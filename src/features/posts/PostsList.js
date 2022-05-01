@@ -12,19 +12,16 @@ const PostsList = () => {
     .sort((a, b) => b.date.localeCompare(a.date));
   const renderPosts = orderedPosts.map((post) => {
     return (
-      <div key={post.id}>
-        <article>
-          <h3>{post.title}</h3>
-          <p>{post.content.substring(0, 100)}</p>
-          <p>
-            <PostAuthor userId={post.userId} />
-            <br />
-            <TimeAgo timestamp={post.date} />
-          </p>
-          <ReactionButtons post={post} />
-        </article>
-        <hr />
-      </div>
+      <article key={post.id}>
+        <h3>{post.title}</h3>
+        <p>{post.content.substring(0, 100)}</p>
+        <p>
+          <PostAuthor userId={post.userId} />
+          <br />
+          <TimeAgo timestamp={post.date} />
+        </p>
+        <ReactionButtons post={post} />
+      </article>
     );
   });
   return (

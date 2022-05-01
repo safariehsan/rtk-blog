@@ -27,8 +27,8 @@ function App() {
       <hr />
       <Counter />
       <hr /> */}
-      <Posts />
       <AddPostForm />
+      <Posts />
       {/* <hr />
       <Register /> */}
     </div>
